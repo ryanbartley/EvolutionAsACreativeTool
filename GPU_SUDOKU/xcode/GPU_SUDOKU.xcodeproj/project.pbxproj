@@ -21,9 +21,11 @@
 		B334148518121460003BC82B /* fitness.frag in Sources */ = {isa = PBXBuildFile; fileRef = B334148418121460003BC82B /* fitness.frag */; };
 		B3341487181215F9003BC82B /* render.vert in Sources */ = {isa = PBXBuildFile; fileRef = B3341486181215F9003BC82B /* render.vert */; };
 		B33414891812161F003BC82B /* render.frag in Sources */ = {isa = PBXBuildFile; fileRef = B33414881812161F003BC82B /* render.frag */; };
-		B3FFA7841814CF900004CDE9 /* crossover.vert in Sources */ = {isa = PBXBuildFile; fileRef = B3FFA7831814CF900004CDE9 /* crossover.vert */; };
-		B3FFA7861814CFA50004CDE9 /* crossover.geom in Sources */ = {isa = PBXBuildFile; fileRef = B3FFA7851814CFA50004CDE9 /* crossover.geom */; };
-		B3FFA7881814D5C90004CDE9 /* evaluate.vert in Sources */ = {isa = PBXBuildFile; fileRef = B3FFA7871814D5C90004CDE9 /* evaluate.vert */; };
+		B3FFA7881814D5C90004CDE9 /* evaluateCross.vert in Sources */ = {isa = PBXBuildFile; fileRef = B3FFA7871814D5C90004CDE9 /* evaluateCross.vert */; };
+		B3FFA78E181570FC0004CDE9 /* evaluateCross.frag in Sources */ = {isa = PBXBuildFile; fileRef = B3FFA78D181570FC0004CDE9 /* evaluateCross.frag */; };
+		B3FFA7901815AAC30004CDE9 /* evaluateCross.geom in Sources */ = {isa = PBXBuildFile; fileRef = B3FFA78F1815AAC30004CDE9 /* evaluateCross.geom */; };
+		B3FFA792181628470004CDE9 /* mutate.vert in Sources */ = {isa = PBXBuildFile; fileRef = B3FFA791181628470004CDE9 /* mutate.vert */; };
+		B3FFA794181628640004CDE9 /* mutate.frag in Sources */ = {isa = PBXBuildFile; fileRef = B3FFA793181628640004CDE9 /* mutate.frag */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,9 +46,11 @@
 		B334148418121460003BC82B /* fitness.frag */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; fileEncoding = 4; name = fitness.frag; path = ../assets/fitness.frag; sourceTree = "<group>"; };
 		B3341486181215F9003BC82B /* render.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = render.vert; path = ../assets/render.vert; sourceTree = "<group>"; };
 		B33414881812161F003BC82B /* render.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = render.frag; path = ../assets/render.frag; sourceTree = "<group>"; };
-		B3FFA7831814CF900004CDE9 /* crossover.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = crossover.vert; path = ../assets/crossover.vert; sourceTree = "<group>"; };
-		B3FFA7851814CFA50004CDE9 /* crossover.geom */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = crossover.geom; path = ../assets/crossover.geom; sourceTree = "<group>"; };
-		B3FFA7871814D5C90004CDE9 /* evaluate.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = evaluate.vert; path = ../assets/evaluate.vert; sourceTree = "<group>"; };
+		B3FFA7871814D5C90004CDE9 /* evaluateCross.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = evaluateCross.vert; path = ../assets/evaluateCross.vert; sourceTree = "<group>"; };
+		B3FFA78D181570FC0004CDE9 /* evaluateCross.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = evaluateCross.frag; path = ../assets/evaluateCross.frag; sourceTree = "<group>"; };
+		B3FFA78F1815AAC30004CDE9 /* evaluateCross.geom */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = evaluateCross.geom; path = ../assets/evaluateCross.geom; sourceTree = "<group>"; };
+		B3FFA791181628470004CDE9 /* mutate.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = mutate.vert; path = ../assets/mutate.vert; sourceTree = "<group>"; };
+		B3FFA793181628640004CDE9 /* mutate.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = mutate.frag; sourceTree = "<group>"; };
 		DE5BE6D3FD204B4FAAB2F17E /* CinderApp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = CinderApp.icns; path = ../resources/CinderApp.icns; sourceTree = "<group>"; };
 		E146F54ACC9E4372BE1214DF /* GPU_SUDOKU_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; path = GPU_SUDOKU_Prefix.pch; sourceTree = "<group>"; };
 		EA276E661AFC4B4C8D1C79CC /* Resources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Resources.h; path = ../include/Resources.h; sourceTree = "<group>"; };
@@ -147,9 +151,11 @@
 				6FDA3F147B7A4B05B308F009 /* Info.plist */,
 				B3341482181212E2003BC82B /* fitness.vert */,
 				B334148418121460003BC82B /* fitness.frag */,
-				B3FFA7871814D5C90004CDE9 /* evaluate.vert */,
-				B3FFA7831814CF900004CDE9 /* crossover.vert */,
-				B3FFA7851814CFA50004CDE9 /* crossover.geom */,
+				B3FFA7871814D5C90004CDE9 /* evaluateCross.vert */,
+				B3FFA78F1815AAC30004CDE9 /* evaluateCross.geom */,
+				B3FFA78D181570FC0004CDE9 /* evaluateCross.frag */,
+				B3FFA791181628470004CDE9 /* mutate.vert */,
+				B3FFA793181628640004CDE9 /* mutate.frag */,
 				B3341486181215F9003BC82B /* render.vert */,
 				B33414881812161F003BC82B /* render.frag */,
 			);
@@ -229,11 +235,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DC3D5073B914BD9B7B3122F /* GPU_SUDOKUApp.cpp in Sources */,
-				B3FFA7861814CFA50004CDE9 /* crossover.geom in Sources */,
+				B3FFA7901815AAC30004CDE9 /* evaluateCross.geom in Sources */,
+				B3FFA78E181570FC0004CDE9 /* evaluateCross.frag in Sources */,
+				B3FFA794181628640004CDE9 /* mutate.frag in Sources */,
+				B3FFA792181628470004CDE9 /* mutate.vert in Sources */,
 				B334148518121460003BC82B /* fitness.frag in Sources */,
-				B3FFA7881814D5C90004CDE9 /* evaluate.vert in Sources */,
+				B3FFA7881814D5C90004CDE9 /* evaluateCross.vert in Sources */,
 				B3341487181215F9003BC82B /* render.vert in Sources */,
-				B3FFA7841814CF900004CDE9 /* crossover.vert in Sources */,
 				B3341483181212E2003BC82B /* fitness.vert in Sources */,
 				B33414891812161F003BC82B /* render.frag in Sources */,
 			);

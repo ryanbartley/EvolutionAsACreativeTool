@@ -79,11 +79,8 @@ void main(void)
 //			}
 //		}
 //	}
-	
-	if( !flipToZero )
-		tf_mating_info = ivec4(xVal, yVal, zVal, mating_info.w);
-	else
-		tf_mating_info = ivec4(xVal, yVal, zVal, 0);
+
+	tf_mating_info = ivec4(xVal, yVal, zVal, mating_info.w);
 //	int index = retrieveIndex( vec2( 8, 9 ) );
 //	vec4 numbers = texelFetch( tex_mating_info, index_to_cur_x_y ).xyzw;
 	
